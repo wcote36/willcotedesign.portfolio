@@ -1,0 +1,25 @@
+.DS_Store
+.next/
+node_modules/
+assets/
+tmp/
+out/
+dist/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Earlier static prototype files; the live portfolio is the Next.js app.
+/*.html
+/script.js
+/styles.css
+
+# Public build inputs not used by the current Next.js site.
+/public/assets/docs/
+/public/assets/extracted/
+/public/assets/mockup/
+/public/assets/projects/
+/public/assets/hero-oktoberfest.jpg
