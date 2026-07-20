@@ -40,7 +40,7 @@ export const projects: Project[] = [
     title: "Purple House",
     slug: "purple-house",
     category: "Brand Identity / Place System",
-    year: "2025",
+    year: "2025/2026",
     client: "Self-initiated",
     role: "Identity, art direction, print system",
     tools: ["Illustrator", "Photoshop", "InDesign"],
@@ -87,8 +87,8 @@ export const projects: Project[] = [
     year: "2025",
     client: "Pro Skills Basketball",
     role: "Event identity, apparel, graphics",
-    tools: ["Illustrator", "Photoshop"],
-    duration: "4 weeks",
+    tools: ["Illustrator", "Photoshop", "After Effects"],
+    duration: "8 weeks",
     description:
       "An event identity system for a national basketball summit, built to feel athletic, modular, and direct. The system extends across badges, apparel, agendas, social graphics, and environmental moments.",
     cover: {
