@@ -1,8 +1,9 @@
 .DS_Store
 .next/
 node_modules/
-assets/
+/assets/
 tmp/
+.pnpm-store/
 out/
 dist/
 .env

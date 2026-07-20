@@ -5,6 +5,11 @@ export type ProjectImage = {
   layout?: "full" | "half" | "third";
 };
 
+export type ProjectVideo = {
+  src: string;
+  title: string;
+};
+
 export type ProjectSection = {
   eyebrow?: string;
   title: string;
@@ -25,6 +30,7 @@ export type Project = {
   cover: ProjectImage;
   gallery: ProjectImage[];
   sections: ProjectSection[];
+  videos?: ProjectVideo[];
   featured: boolean;
   span?: "default" | "wide";
 };
@@ -112,6 +118,16 @@ export const projects: Project[] = [
         title: "Badges, type, and color do the heavy lifting.",
         body:
           "The graphic language is built from repeatable parts: team-like badges, compressed type, direct color blocking, and simple application rules. The result feels active without becoming noisy."
+      }
+    ],
+    videos: [
+      {
+        src: "/assets/videos/psb-summit-2026-motion.mp4",
+        title: "Summit 2026 motion system"
+      },
+      {
+        src: "/assets/videos/psb-summit-2026-grid.mp4",
+        title: "Summit 2026 application grid"
       }
     ],
     featured: true

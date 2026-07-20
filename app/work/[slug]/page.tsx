@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FadeIn } from "@/components/FadeIn";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { ProjectVideoSection } from "@/components/ProjectVideoSection";
 import { getProject, projects } from "@/lib/projects";
 
 type ProjectPageProps = {
@@ -85,6 +86,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           ))}
         </div>
       </section>
+
+      {project.videos ? <ProjectVideoSection videos={project.videos} /> : null}
     </main>
   );
 }
