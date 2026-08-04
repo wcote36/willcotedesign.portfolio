@@ -27,8 +27,8 @@ export type Project = {
   tools: string[];
   duration: string;
   description: string;
-  problem: string;
-  solution: string;
+  problem?: string;
+  solution?: string;
   cover: ProjectImage;
   gallery: ProjectImage[];
   sections: ProjectSection[];
@@ -279,10 +279,6 @@ export const projects: Project[] = [
     duration: "Ongoing",
     description:
       "A focused pair of tactile studies across printmaking and oil painting. These pieces show hand, material, and image-making range outside the core identity and editorial systems.",
-    problem:
-      "These pieces needed to fit into the portfolio while showing a more hands-on side of the work.",
-    solution:
-      "I kept the section focused on process, composition, and material so the pieces could stand apart from the design systems.",
     cover: {
       src: "/assets/web/sunblock-print.jpg",
       alt: "Sun Print"
