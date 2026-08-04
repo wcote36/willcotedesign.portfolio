@@ -54,8 +54,8 @@ export const projects: Project[] = [
     gallery: [
       { src: "/assets/web/room-photo.jpg", alt: "Purple House bed installation", layout: "full" },
       {
-        src: "/assets/web/room-unbranded-design-experiments.png",
-        alt: "Purple House design experiments",
+        src: "/assets/web/purple-house-design-ideas-2025.png",
+        alt: "Purple House design ideas and experiments",
         layout: "full"
       },
       { src: "/assets/web/room-unbranded-snail-print.jpg", alt: "Purple House print detail", layout: "half" },
