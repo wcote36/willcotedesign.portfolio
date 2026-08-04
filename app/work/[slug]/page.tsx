@@ -49,6 +49,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {project.title}
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">{project.description}</p>
+          <div className="mt-10 grid max-w-4xl gap-6 border-t border-rule pt-6 sm:grid-cols-2">
+            <div>
+              <h2 className="text-[12px] font-medium uppercase leading-none text-muted">Problem</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">{project.problem}</p>
+            </div>
+            <div>
+              <h2 className="text-[12px] font-medium uppercase leading-none text-muted">Solution</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">{project.solution}</p>
+            </div>
+          </div>
         </FadeIn>
 
         <FadeIn className="self-end border-t border-rule pt-5">

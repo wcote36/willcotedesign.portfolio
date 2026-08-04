@@ -27,6 +27,8 @@ export type Project = {
   tools: string[];
   duration: string;
   description: string;
+  problem: string;
+  solution: string;
   cover: ProjectImage;
   gallery: ProjectImage[];
   sections: ProjectSection[];
@@ -47,6 +49,10 @@ export const projects: Project[] = [
     duration: "5 weeks",
     description:
       "A visual identity for an imagined creative house built around room-like storytelling, handmade texture, and quiet ritual. The system balances archival-feeling imagery with direct typographic structure.",
+    problem:
+      "The project needed to turn an abstract place-based concept into an identity that felt specific, tactile, and emotionally grounded without becoming overly decorative.",
+    solution:
+      "I built a flexible visual language from collected objects, coastal references, hand-drawn marks, and restrained typography, creating a system that feels lived-in while still working across print and brand applications.",
     cover: {
       src: "/assets/web/room-photo.jpg",
       alt: "Purple House bed installation photo"
@@ -91,6 +97,10 @@ export const projects: Project[] = [
     duration: "8 weeks",
     description:
       "An event identity system for a national basketball summit, built to feel athletic, modular, and direct. The system extends across badges, apparel, agendas, social graphics, and environmental moments.",
+    problem:
+      "The summit needed a visual system that could feel energetic and competitive while staying clear across apparel, print collateral, motion, and event touchpoints.",
+    solution:
+      "I developed a badge-led identity with bold type, direct color blocking, and repeatable graphic elements that could scale from logos and merchandise to posters, agendas, and animated social assets.",
     cover: {
       src: "/assets/web/psb-summit-logo.png",
       alt: "Pro Skills Basketball Summit logo"
@@ -143,6 +153,10 @@ export const projects: Project[] = [
     duration: "Semester project",
     description:
       "A senior project investigating how digital communities can function as third spaces. The work combines research, publication design, installation, and interface studies into one cohesive system.",
+    problem:
+      "The subject of online community can feel abstract and difficult to visualize, especially when translating research into a public-facing design experience.",
+    solution:
+      "I created a multi-format system that moves between writing, installation, print, and interface studies, making digital belonging feel tangible through measured typography, imagery, and spatial presentation.",
     cover: {
       src: "/assets/web/digital-third-spaces-thumb.jpg",
       alt: "Digital Third Spaces thumbnail image"
@@ -183,6 +197,10 @@ export const projects: Project[] = [
     duration: "5 weeks",
     description:
       "A packaging and event identity for an Oktoberfest-inspired brand. The system uses bold color, crisp type, and direct application design across labels, tickets, postcards, and festival materials.",
+    problem:
+      "The identity needed to communicate celebration and tradition while still feeling organized, contemporary, and usable across packaging and event materials.",
+    solution:
+      "I combined festival-inspired color, structured typography, and direct graphic rules to create a system that feels lively without losing clarity across labels, tickets, postcards, and collateral.",
     cover: {
       src: "/assets/web/oktoberfest-packaging.jpg",
       alt: "Prost packaging system"
@@ -215,6 +233,10 @@ export const projects: Project[] = [
     duration: "3 weeks",
     description:
       "A small editorial book built from family postcard material, memory, and interviews about Germany. The object pairs restrained typography with tactile binding details and quiet image pacing.",
+    problem:
+      "Personal archival material needed to become a designed object that felt intimate and meaningful without overwhelming the family stories or postcard imagery.",
+    solution:
+      "I used quiet pacing, restrained typography, warm material choices, and tactile binding to create an editorial book that lets memory and object details carry the experience.",
     cover: {
       src: "/assets/web/german-postcard-book-cover-rotated.jpg",
       alt: "German Postcard Book cover"
@@ -257,6 +279,10 @@ export const projects: Project[] = [
     duration: "Ongoing",
     description:
       "A focused pair of tactile studies across printmaking and oil painting. These pieces show hand, material, and image-making range outside the core identity and editorial systems.",
+    problem:
+      "These studies needed to show range and material sensitivity while still feeling cohesive within a portfolio centered on identity, editorial, and system-based work.",
+    solution:
+      "I framed the pieces as focused studies in process, composition, and surface, allowing the hand-made qualities of linocut and oil painting to add depth to the broader portfolio.",
     cover: {
       src: "/assets/web/sunblock-print.jpg",
       alt: "Sun Print"
