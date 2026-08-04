@@ -154,9 +154,9 @@ export const projects: Project[] = [
     description:
       "A senior project investigating how digital communities can function as third spaces. The work combines research, publication design, installation, and interface studies into one cohesive system.",
     problem:
-      "The research was about online community, which can be hard to make visible in a physical or public-facing format.",
+      "The project needed to turn the idea of a digital third space into something people could experience as a physical installation.",
     solution:
-      "I used writing, installation, print, and interface studies to show the ideas in a more tangible way.",
+      "I used printed pieces, interface studies, and installation details to approach the space through experiential design.",
     cover: {
       src: "/assets/web/digital-third-spaces-thumb.jpg",
       alt: "Digital Third Spaces thumbnail image"
