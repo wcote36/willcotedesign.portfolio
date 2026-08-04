@@ -8,19 +8,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="mx-auto max-w-[1600px] px-5 pb-10 pt-10 sm:px-8 sm:pt-14 lg:px-12">
-        <FadeIn className="max-w-[720px]">
-          <p className="text-[12px] font-medium uppercase leading-none text-muted">William Cote</p>
-          <h1 className="mt-5 text-[clamp(2.5rem,8vw,7.8rem)] font-normal leading-[0.98] tracking-normal">
-            Graphic Designer
-          </h1>
-          <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
-            Brand Identity • Editorial • Apparel • Digital
-          </p>
-        </FadeIn>
-      </section>
-
-      <section id="work" aria-label="Selected work" className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+      <section id="work" aria-label="Selected work" className="mx-auto max-w-[1600px] px-5 pt-10 sm:px-8 sm:pt-14 lg:px-12">
         <div className="grid gap-x-6 gap-y-14 md:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
           {featuredProjects.map((project, index) => (
             <FadeIn key={project.slug} as="article">
