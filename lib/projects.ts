@@ -71,7 +71,12 @@ export const projects: Project[] = [
       {
         src: "/assets/web/purple-house-design-ideas-2025.png",
         alt: "Purple House design ideas and experiments",
-        layout: "full"
+        layout: "half"
+      },
+      {
+        src: "/assets/web/purple-house-printed-materials-photo.jpg",
+        alt: "Purple House printed materials and menus",
+        layout: "half"
       },
       { src: "/assets/web/room-unbranded-snail-print.jpg", alt: "Purple House print detail", layout: "half" },
       { src: "/assets/web/room-coins.jpg", alt: "Purple House coin research", layout: "half" },
