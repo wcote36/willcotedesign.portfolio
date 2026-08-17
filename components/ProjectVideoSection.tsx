@@ -9,24 +9,28 @@ type ProjectVideoSectionProps = {
 };
 
 export function ProjectVideoSection({ videos, section }: ProjectVideoSectionProps) {
-  return (
-    <section className="mx-auto max-w-[1800px] px-5 pt-24 sm:px-8 lg:px-12">
-      <div className="border-t border-rule pt-10">
-        <div className="grid gap-6 md:grid-cols-[0.65fr_1.35fr]">
-          <p className="text-[12px] font-medium uppercase leading-none text-muted">{section?.eyebrow ?? "Motion"}</p>
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-normal leading-tight sm:text-5xl">
-              {section?.title ?? "Motion and campaign touchpoints."}
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
-              {section?.body ?? "Video applications extend the identity into animated and social-facing moments."}
-            </p>
-          </div>
-        </div>
+  const hideIntro = section?.hideIntro;
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:gap-8">
+  return (
+    <section className={hideIntro ? "pt-16" : "mx-auto max-w-[1800px] px-5 pt-24 sm:px-8 lg:px-12"}>
+      <div className={hideIntro ? "" : "border-t border-rule pt-10"}>
+        {hideIntro ? null : (
+          <div className="grid gap-6 md:grid-cols-[0.65fr_1.35fr]">
+            <p className="text-[12px] font-medium uppercase leading-none text-muted">{section?.eyebrow ?? "Motion"}</p>
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-normal leading-tight sm:text-5xl">
+                {section?.title ?? "Motion and campaign touchpoints."}
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
+                {section?.body ?? "Video applications extend the identity into animated and social-facing moments."}
+              </p>
+            </div>
+          </div>
+        )}
+
+        <div className={hideIntro ? "grid gap-0" : "mt-12 grid gap-5 md:grid-cols-2 lg:gap-8"}>
           {videos.map((video) => (
-            <ScrollVideo key={video.src} video={video} />
+            <ScrollVideo key={video.src} video={video} immersive={hideIntro} />
           ))}
         </div>
       </div>
@@ -34,7 +38,7 @@ export function ProjectVideoSection({ videos, section }: ProjectVideoSectionProp
   );
 }
 
-function ScrollVideo({ video }: { video: ProjectVideo }) {
+function ScrollVideo({ video, immersive = false }: { video: ProjectVideo; immersive?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPausedByUser, setIsPausedByUser] = useState(false);
 
@@ -87,7 +91,11 @@ function ScrollVideo({ video }: { video: ProjectVideo }) {
         playsInline
         preload="metadata"
         tabIndex={0}
-        className="aspect-[16/10] w-full cursor-pointer bg-[#efefeb] object-contain outline-none focus-visible:ring-1 focus-visible:ring-ink dark:bg-[#191918]"
+        className={
+          immersive
+            ? "h-[80vh] min-h-[360px] w-full cursor-pointer bg-[#efefeb] object-contain outline-none focus-visible:ring-1 focus-visible:ring-ink sm:h-[calc(100vh-96px)] sm:min-h-[520px] dark:bg-[#191918]"
+            : "aspect-[16/10] w-full cursor-pointer bg-[#efefeb] object-contain outline-none focus-visible:ring-1 focus-visible:ring-ink dark:bg-[#191918]"
+        }
         onClick={togglePlayback}
         onKeyDown={(event) => {
           if (event.key === "Enter" || event.key === " ") {

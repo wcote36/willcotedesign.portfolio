@@ -85,23 +85,25 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {project.gallery.length > 0 ? <ProjectGallery images={project.gallery} title={project.title} /> : null}
 
-      <section className="mx-auto max-w-[1600px] px-5 pt-24 sm:px-8 lg:px-12">
-        <div className="grid gap-14 border-t border-rule pt-10">
-          {project.sections.map((section) => (
-            <FadeIn key={section.title} className="grid gap-6 md:grid-cols-[0.65fr_1.35fr]">
-              <div>
-                {section.eyebrow ? (
-                  <p className="text-[12px] font-medium uppercase leading-none text-muted">{section.eyebrow}</p>
-                ) : null}
-              </div>
-              <div className="max-w-3xl">
-                <h2 className="text-3xl font-normal leading-tight sm:text-5xl">{section.title}</h2>
-                <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">{section.body}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </section>
+      {project.sections.length > 0 ? (
+        <section className="mx-auto max-w-[1600px] px-5 pt-24 sm:px-8 lg:px-12">
+          <div className="grid gap-14 border-t border-rule pt-10">
+            {project.sections.map((section) => (
+              <FadeIn key={section.title} className="grid gap-6 md:grid-cols-[0.65fr_1.35fr]">
+                <div>
+                  {section.eyebrow ? (
+                    <p className="text-[12px] font-medium uppercase leading-none text-muted">{section.eyebrow}</p>
+                  ) : null}
+                </div>
+                <div className="max-w-3xl">
+                  <h2 className="text-3xl font-normal leading-tight sm:text-5xl">{section.title}</h2>
+                  <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">{section.body}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {project.videos ? <ProjectVideoSection videos={project.videos} section={project.videoSection} /> : null}
     </main>

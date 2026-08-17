@@ -11,9 +11,10 @@ export type ProjectVideo = {
 };
 
 export type ProjectVideoSection = {
-  eyebrow: string;
-  title: string;
-  body: string;
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+  hideIntro?: boolean;
 };
 
 export type ProjectSection = {
@@ -242,9 +243,9 @@ export const projects: Project[] = [
     description:
       "A short animated motion piece built around an animal tour through Hyde Park in London. The project uses character, rhythm, and simple movement to turn a small illustrated system into a moving sequence.",
     problem:
-      "The piece needed to make a simple illustrated idea feel active and easy to follow as motion.",
+      "Create a tour for visitors to embark on at Hyde Park in London, using the park's animals as the guide.",
     solution:
-      "I used looping movement, pacing, and character-based transitions to give the tour a clear animated rhythm.",
+      "Visitors can only move by following the animals. They lead the experience through parts of the park people might not normally choose to explore.",
     cover: {
       src: "/assets/web/animal-tour-title.png",
       alt: "Animal Tour Hyde Park London animation still"
@@ -254,18 +255,9 @@ export const projects: Project[] = [
       title: "Animal Tour Hyde Park London animation"
     },
     gallery: [],
-    sections: [
-      {
-        eyebrow: "Motion",
-        title: "An illustrated system brought into motion.",
-        body:
-          "The animation focuses on simple illustrated assets, clear timing, and a compact sequence that can live as a digital motion piece."
-      }
-    ],
+    sections: [],
     videoSection: {
-      eyebrow: "Animation",
-      title: "Animal Tour Hyde Park London 2025.",
-      body: "The final MP4 presents the tour as a short looping motion piece."
+      hideIntro: true
     },
     videos: [
       {
