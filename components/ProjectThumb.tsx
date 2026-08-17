@@ -33,6 +33,7 @@ export function ProjectThumb({ project, priority = false }: ProjectThumbProps) {
           />
         )}
       </div>
+      <h2 className="mt-4 text-[13px] font-medium leading-snug sm:text-sm">{project.title}</h2>
     </Link>
   );
 }
