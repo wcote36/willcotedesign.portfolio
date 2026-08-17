@@ -10,6 +10,12 @@ export type ProjectVideo = {
   title: string;
 };
 
+export type ProjectVideoSection = {
+  eyebrow: string;
+  title: string;
+  body: string;
+};
+
 export type ProjectSection = {
   eyebrow?: string;
   title: string;
@@ -30,8 +36,10 @@ export type Project = {
   problem?: string;
   solution?: string;
   cover: ProjectImage;
+  coverVideo?: ProjectVideo;
   gallery: ProjectImage[];
   sections: ProjectSection[];
+  videoSection?: ProjectVideoSection;
   videos?: ProjectVideo[];
   featured: boolean;
   span?: "default" | "wide";
@@ -223,47 +231,46 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    title: "German Postcard Book",
-    slug: "germany-postcard-book",
-    category: "Editorial Design / Book System",
-    year: "2024",
+    title: "Animal Tour Hyde Park London",
+    slug: "animal-tour-hyde-park-london",
+    category: "Motion Design / Illustration",
+    year: "2025",
     client: "Self-initiated",
-    role: "Editorial design, typography, binding",
-    tools: ["InDesign", "Photoshop"],
-    duration: "3 weeks",
+    role: "Animation, illustration, motion design",
+    tools: ["After Effects", "Illustrator"],
+    duration: "Motion study",
     description:
-      "A small editorial book built from family postcard material, memory, and interviews about Germany. The object pairs restrained typography with tactile binding details and quiet image pacing.",
+      "A short animated motion piece built around an animal tour through Hyde Park in London. The project uses character, rhythm, and simple movement to turn a small illustrated system into a moving sequence.",
     problem:
-      "The archival material needed to become a book without overpowering the family stories or postcard imagery.",
+      "The piece needed to make a simple illustrated idea feel active and easy to follow as motion.",
     solution:
-      "I kept the typography, pacing, and binding simple so the material could stay at the center of the piece.",
+      "I used looping movement, pacing, and character-based transitions to give the tour a clear animated rhythm.",
     cover: {
-      src: "/assets/web/german-postcard-book-cover-rotated.jpg",
-      alt: "German Postcard Book cover"
+      src: "/assets/web/animal-tour-title.png",
+      alt: "Animal Tour Hyde Park London animation still"
     },
-    gallery: [
-      {
-        src: "/assets/web/german-postcard-book-cover-rotated.jpg",
-        alt: "German Postcard Book cover",
-        layout: "half"
-      },
-      {
-        src: "/assets/web/bound-spread-1.jpg",
-        alt: "German Postcard Book interior spread",
-        layout: "half"
-      },
-      {
-        src: "/assets/web/bound-spread-2.jpg",
-        alt: "German Postcard Book spread detail",
-        layout: "half"
-      }
-    ],
+    coverVideo: {
+      src: "/assets/videos/animal-tour-hyde-park-london-2025.mp4",
+      title: "Animal Tour Hyde Park London animation"
+    },
+    gallery: [],
     sections: [
       {
-        eyebrow: "Editorial",
-        title: "A quiet book system for family memory.",
+        eyebrow: "Motion",
+        title: "An illustrated system brought into motion.",
         body:
-          "The design uses simple pacing, warm paper tone, archival imagery, and a ribbon-bound format to make the book feel personal without becoming decorative."
+          "The animation focuses on simple illustrated assets, clear timing, and a compact sequence that can live as a digital motion piece."
+      }
+    ],
+    videoSection: {
+      eyebrow: "Animation",
+      title: "Animal Tour Hyde Park London 2025.",
+      body: "The final MP4 presents the tour as a short looping motion piece."
+    },
+    videos: [
+      {
+        src: "/assets/videos/animal-tour-hyde-park-london-2025.mp4",
+        title: "Animal Tour Hyde Park London 2025"
       }
     ],
     featured: true

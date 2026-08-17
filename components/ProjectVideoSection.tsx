@@ -1,22 +1,25 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { ProjectVideo } from "@/lib/projects";
+import type { ProjectVideo, ProjectVideoSection as ProjectVideoSectionType } from "@/lib/projects";
 
 type ProjectVideoSectionProps = {
   videos: ProjectVideo[];
+  section?: ProjectVideoSectionType;
 };
 
-export function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
+export function ProjectVideoSection({ videos, section }: ProjectVideoSectionProps) {
   return (
     <section className="mx-auto max-w-[1800px] px-5 pt-24 sm:px-8 lg:px-12">
       <div className="border-t border-rule pt-10">
         <div className="grid gap-6 md:grid-cols-[0.65fr_1.35fr]">
-          <p className="text-[12px] font-medium uppercase leading-none text-muted">Summit 2026</p>
+          <p className="text-[12px] font-medium uppercase leading-none text-muted">{section?.eyebrow ?? "Motion"}</p>
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-normal leading-tight sm:text-5xl">Motion and campaign touchpoints.</h2>
+            <h2 className="text-3xl font-normal leading-tight sm:text-5xl">
+              {section?.title ?? "Motion and campaign touchpoints."}
+            </h2>
             <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
-              Video applications extend the summit identity into animated and social-facing moments.
+              {section?.body ?? "Video applications extend the identity into animated and social-facing moments."}
             </p>
           </div>
         </div>

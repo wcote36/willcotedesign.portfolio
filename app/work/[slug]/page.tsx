@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </FadeIn>
       </section>
 
-      <ProjectGallery images={project.gallery} title={project.title} />
+      {project.gallery.length > 0 ? <ProjectGallery images={project.gallery} title={project.title} /> : null}
 
       <section className="mx-auto max-w-[1600px] px-5 pt-24 sm:px-8 lg:px-12">
         <div className="grid gap-14 border-t border-rule pt-10">
@@ -103,7 +103,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      {project.videos ? <ProjectVideoSection videos={project.videos} /> : null}
+      {project.videos ? <ProjectVideoSection videos={project.videos} section={project.videoSection} /> : null}
     </main>
   );
 }
