@@ -33,11 +33,6 @@ export function ProjectThumb({ project, priority = false }: ProjectThumbProps) {
           />
         )}
       </div>
-      <div className="mt-4 grid grid-cols-[1fr_auto] gap-4 text-[13px] leading-snug sm:text-sm">
-        <h2 className="font-medium">{project.title}</h2>
-        <p className="text-muted">{project.year}</p>
-        <p className="col-span-2 text-muted">{project.category}</p>
-      </div>
     </Link>
   );
 }
