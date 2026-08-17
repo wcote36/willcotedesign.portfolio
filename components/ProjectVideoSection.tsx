@@ -41,6 +41,7 @@ export function ProjectVideoSection({ videos, section }: ProjectVideoSectionProp
 function ScrollVideo({ video, immersive = false }: { video: ProjectVideo; immersive?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPausedByUser, setIsPausedByUser] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
     const element = videoRef.current;
@@ -79,14 +80,33 @@ function ScrollVideo({ video, immersive = false }: { video: ProjectVideo; immers
     }
   }
 
+  function toggleSound() {
+    const element = videoRef.current;
+
+    setIsMuted((current) => {
+      const next = !current;
+
+      if (element) {
+        element.muted = next;
+
+        if (!next) {
+          element.play().catch(() => {});
+          setIsPausedByUser(false);
+        }
+      }
+
+      return next;
+    });
+  }
+
   return (
-    <figure>
+    <figure className="relative">
       <video
         ref={videoRef}
         src={video.src}
         title={video.title}
         aria-label={video.title}
-        muted
+        muted={isMuted}
         loop
         playsInline
         preload="metadata"
@@ -104,6 +124,17 @@ function ScrollVideo({ video, immersive = false }: { video: ProjectVideo; immers
           }
         }}
       />
+      <button
+        type="button"
+        aria-label={isMuted ? "Turn sound on" : "Turn sound off"}
+        className="absolute bottom-4 right-4 bg-[#fafaf8]/90 px-3 py-2 text-[12px] font-medium uppercase leading-none text-ink shadow-sm transition hover:bg-[#fafaf8] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ink dark:bg-[#111111]/85 dark:text-[#fafaf8] dark:hover:bg-[#111111]"
+        onClick={(event) => {
+          event.stopPropagation();
+          toggleSound();
+        }}
+      >
+        {isMuted ? "Sound On" : "Sound Off"}
+      </button>
     </figure>
   );
 }
