@@ -42,6 +42,7 @@ export type Project = {
   sections: ProjectSection[];
   videoSection?: ProjectVideoSection;
   videos?: ProjectVideo[];
+  afterVideos?: ProjectImage[];
   featured: boolean;
   span?: "default" | "wide";
 };
@@ -268,6 +269,13 @@ export const projects: Project[] = [
       {
         src: "/assets/videos/animal-tour-hyde-park-london-2025.mp4",
         title: "Animal Tour Hyde Park London 2025"
+      }
+    ],
+    afterVideos: [
+      {
+        src: "/assets/web/animal-tour-hyde-park-book-layout.jpg",
+        alt: "Animal Tour Hyde Park book layout",
+        layout: "full"
       }
     ],
     featured: true

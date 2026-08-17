@@ -86,6 +86,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {project.gallery.length > 0 ? <ProjectGallery images={project.gallery} title={project.title} /> : null}
 
       {project.videos ? <ProjectVideoSection videos={project.videos} section={project.videoSection} /> : null}
+
+      {project.afterVideos && project.afterVideos.length > 0 ? (
+        <div className="pt-5 sm:pt-8">
+          <ProjectGallery images={project.afterVideos} title={project.title} />
+        </div>
+      ) : null}
     </main>
   );
 }
