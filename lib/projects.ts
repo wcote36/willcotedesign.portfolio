@@ -110,8 +110,8 @@ export const projects: Project[] = [
     solution:
       "I built the system around badges, bold type, color blocking, and repeatable elements that could be used across the different touchpoints.",
     cover: {
-      src: "/assets/web/psb-summit-logo.png",
-      alt: "Pro Skills Basketball Summit logo"
+      src: "/assets/web/psb-poster-thumbnail.jpg",
+      alt: "Pro Skills Basketball Summit poster mockup"
     },
     gallery: [
       { src: "/assets/web/psb-poster-wall-mockup-2.png", alt: "Pro Skills Basketball summit posters on wall", layout: "full" },
