@@ -232,7 +232,7 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    title: "Animal Tour Hyde Park London",
+    title: "Animal Tour",
     slug: "animal-tour-hyde-park-london",
     category: "Motion Design / Illustration",
     year: "2025",
@@ -241,7 +241,7 @@ export const projects: Project[] = [
     tools: ["After Effects", "Illustrator"],
     duration: "Motion study",
     description:
-      "A short animated motion piece built around an animal tour through Hyde Park in London. The project uses character, rhythm, and simple movement to turn a small illustrated system into a moving sequence.",
+      "A visitor experience concept for Hyde Park in London that turns the park into an animal-led tour. The outcome gives visitors a simple rule: follow the animals, and let them guide you into parts of the park you may not normally notice.",
     problem:
       "Create a tour for visitors to embark on at Hyde Park in London, using the park's animals as the guide.",
     solution:
