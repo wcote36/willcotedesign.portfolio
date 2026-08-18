@@ -173,8 +173,8 @@ export const projects: Project[] = [
     solution:
       "I used printed pieces, interface studies, and installation details to approach the space through experiential design.",
     cover: {
-      src: "/assets/web/digital-third-spaces-thumb.jpg",
-      alt: "Digital Third Spaces thumbnail image"
+      src: "/assets/web/digital-third-spaces-book-1.jpeg",
+      alt: "Digital Third Spaces book cover"
     },
     gallery: [
       { src: "/assets/web/digital-third-spaces-cadc-gold.png", alt: "Digital Third Spaces CADC Gold award", layout: "half" },
@@ -189,7 +189,8 @@ export const projects: Project[] = [
       { src: "/assets/web/digital-third-spaces-book-4.jpeg", alt: "Digital Third Spaces interface research spread", layout: "half" },
       { src: "/assets/web/digital-third-spaces-book-5.jpeg", alt: "Digital Third Spaces typography spread", layout: "half" },
       { src: "/assets/web/thirdspaces-install.jpg", alt: "Digital Third Spaces bench installation", layout: "half" },
-      { src: "/assets/web/thirdspaces-workshop.jpg", alt: "Visitors reading Digital Third Spaces on the bench", layout: "half" }
+      { src: "/assets/web/thirdspaces-workshop.jpg", alt: "Visitors reading Digital Third Spaces on the bench", layout: "half" },
+      { src: "/assets/web/digital-third-spaces-thumb.jpg", alt: "Digital Third Spaces bench materials", layout: "full" }
     ],
     sections: [
       {
