@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <section id="work" aria-label="Selected work" className="mx-auto max-w-[1600px] px-5 pt-10 sm:px-8 sm:pt-14 lg:px-12">
-        <div className="grid gap-x-6 gap-y-14 md:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+        <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {featuredProjects.map((project, index) => (
             <FadeIn key={project.slug} as="article">
               <ProjectThumb project={project} priority={index < 2} />
