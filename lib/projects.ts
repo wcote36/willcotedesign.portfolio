@@ -177,13 +177,19 @@ export const projects: Project[] = [
       alt: "Digital Third Spaces thumbnail image"
     },
     gallery: [
-      { src: "/assets/web/thirdspaces-install.jpg", alt: "Digital Third Spaces bench installation", layout: "full" },
-      { src: "/assets/web/thirdspaces-workshop.jpg", alt: "Visitors reading Digital Third Spaces on the bench", layout: "half" },
-      { src: "/assets/web/digital-third-spaces-book-1.jpeg", alt: "Digital Third Spaces book cover", layout: "half" },
+      { src: "/assets/web/digital-third-spaces-cadc-gold.png", alt: "Digital Third Spaces CADC Gold award", layout: "half" },
+      {
+        src: "/assets/web/digital-third-spaces-cadc-judges-award.png",
+        alt: "Digital Third Spaces CADC Judges Award",
+        layout: "half"
+      },
+      { src: "/assets/web/digital-third-spaces-book-1.jpeg", alt: "Digital Third Spaces book cover", layout: "full" },
       { src: "/assets/web/digital-third-spaces-book-2.jpeg", alt: "Digital Third Spaces opening spread", layout: "half" },
       { src: "/assets/web/digital-third-spaces-book-3.jpeg", alt: "Digital Third Spaces editorial spread", layout: "half" },
       { src: "/assets/web/digital-third-spaces-book-4.jpeg", alt: "Digital Third Spaces interface research spread", layout: "half" },
-      { src: "/assets/web/digital-third-spaces-book-5.jpeg", alt: "Digital Third Spaces typography spread", layout: "half" }
+      { src: "/assets/web/digital-third-spaces-book-5.jpeg", alt: "Digital Third Spaces typography spread", layout: "half" },
+      { src: "/assets/web/thirdspaces-install.jpg", alt: "Digital Third Spaces bench installation", layout: "half" },
+      { src: "/assets/web/thirdspaces-workshop.jpg", alt: "Visitors reading Digital Third Spaces on the bench", layout: "half" }
     ],
     sections: [
       {
