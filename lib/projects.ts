@@ -188,8 +188,6 @@ export const projects: Project[] = [
       { src: "/assets/web/digital-third-spaces-book-3.jpeg", alt: "Digital Third Spaces editorial spread", layout: "half" },
       { src: "/assets/web/digital-third-spaces-book-4.jpeg", alt: "Digital Third Spaces interface research spread", layout: "half" },
       { src: "/assets/web/digital-third-spaces-book-5.jpeg", alt: "Digital Third Spaces typography spread", layout: "half" },
-      { src: "/assets/web/thirdspaces-install.jpg", alt: "Digital Third Spaces bench installation", layout: "half" },
-      { src: "/assets/web/thirdspaces-workshop.jpg", alt: "Visitors reading Digital Third Spaces on the bench", layout: "half" },
       { src: "/assets/web/digital-third-spaces-thumb.jpg", alt: "Digital Third Spaces bench materials", layout: "full" }
     ],
     sections: [
