@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import type { ProjectImage as ProjectImageType } from "@/lib/projects";
 
 type ProjectGalleryProps = {
@@ -50,30 +50,37 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
         className="mx-auto grid max-w-[1800px] grid-cols-1 gap-5 px-5 sm:px-8 md:grid-cols-6 lg:gap-8 lg:px-12"
       >
         {images.map((image, index) => (
-          <figure key={`${image.src}-${index}`} className={image.layout === "full" ? "md:col-span-6" : "md:col-span-3"}>
-            <button
-              type="button"
-              aria-label={`Open ${image.alt}`}
-              className={`group relative block w-full overflow-hidden bg-[#efefeb] text-left outline-none transition focus-visible:ring-1 focus-visible:ring-ink dark:bg-[#191918] ${
-                image.layout === "full" ? "aspect-[16/10]" : "aspect-[4/3]"
-              }`}
-              onClick={() => setActiveIndex(index)}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                priority={index === 0}
-                quality={100}
-                unoptimized
-                sizes={image.layout === "full" ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
-                className="object-contain transition duration-300 ease-out group-hover:scale-[1.015] group-hover:brightness-[1.03]"
-              />
-            </button>
-            {image.caption ? (
-              <figcaption className="mt-3 max-w-prose text-xs leading-relaxed text-muted">{image.caption}</figcaption>
+          <Fragment key={`${image.src}-${index}`}>
+            {image.sectionHeading ? (
+              <div className="col-span-1 mt-10 border-t border-rule pt-8 md:col-span-6 lg:mt-16">
+                <h2 className="text-2xl font-normal leading-tight sm:text-3xl">{image.sectionHeading}</h2>
+              </div>
             ) : null}
-          </figure>
+            <figure className={image.layout === "full" ? "md:col-span-6" : "md:col-span-3"}>
+              <button
+                type="button"
+                aria-label={`Open ${image.alt}`}
+                className={`group relative block w-full overflow-hidden bg-[#efefeb] text-left outline-none transition focus-visible:ring-1 focus-visible:ring-ink dark:bg-[#191918] ${
+                  image.layout === "full" ? "aspect-[16/10]" : "aspect-[4/3]"
+                }`}
+                onClick={() => setActiveIndex(index)}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority={index === 0}
+                  quality={100}
+                  unoptimized
+                  sizes={image.layout === "full" ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+                  className="object-contain transition duration-300 ease-out group-hover:scale-[1.015] group-hover:brightness-[1.03]"
+                />
+              </button>
+              {image.caption ? (
+                <figcaption className="mt-3 max-w-prose text-xs leading-relaxed text-muted">{image.caption}</figcaption>
+              ) : null}
+            </figure>
+          </Fragment>
         ))}
       </section>
 

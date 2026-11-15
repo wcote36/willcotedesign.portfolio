@@ -3,6 +3,7 @@ export type ProjectImage = {
   alt: string;
   caption?: string;
   layout?: "full" | "half" | "third";
+  sectionHeading?: string;
 };
 
 export type ProjectVideo = {
@@ -121,15 +122,16 @@ export const projects: Project[] = [
       alt: "Pro Skills Basketball Summit poster mockup"
     },
     gallery: [
-      { src: "/assets/web/psb-poster-wall-mockup-2.png", alt: "Pro Skills Basketball summit posters on wall", layout: "full" },
-      { src: "/assets/web/proskills-badges-2.jpg", alt: "Pro Skills Basketball logo explorations 7 through 12", layout: "half" },
+      { src: "/assets/web/proskills-badges-2.jpg", alt: "Pro Skills Basketball logo explorations 7 through 12", layout: "half", sectionHeading: "St. Petersburg Summit 2025" },
       { src: "/assets/web/proskills-badges-1.jpg", alt: "Pro Skills Basketball logo explorations 12 through 17", layout: "half" },
+      { src: "/assets/web/psb-poster-wall-mockup-2.png", alt: "Pro Skills Basketball summit posters on wall", layout: "half" },
       { src: "/assets/web/psb-summit-poster-05.png", alt: "Pro Skills Basketball summit poster", layout: "half" },
-      { src: "/assets/web/proskills-apparel.jpg", alt: "Apparel design", layout: "half" },
-      { src: "/assets/web/psb-mockups-gear-3.png", alt: "Pro Skills Basketball white game day shirt mockup", layout: "half" },
-      { src: "/assets/web/psb-mockups-gear-7.png", alt: "Pro Skills Basketball black shirt design mockup", layout: "half" },
       { src: "/assets/web/proskills-cards.jpg", alt: "Printed cards", layout: "half" },
-      { src: "/assets/web/proskills-agenda.jpg", alt: "Agenda design", layout: "half" }
+      { src: "/assets/web/proskills-agenda.jpg", alt: "Agenda design", layout: "half" },
+      { src: "/assets/web/psb-denver-summit-2026-marks.png", alt: "Denver Summit 2026 badge concepts", layout: "half", sectionHeading: "Denver Summit 2026" },
+      { src: "/assets/web/psb-denver-summit-2026-explorations.png", alt: "Denver Summit 2026 logo explorations", layout: "half" },
+      { src: "/assets/web/psb-denver-summit-2026-applications.png", alt: "Denver Summit 2026 event applications", layout: "full" },
+      { src: "/assets/web/psb-denver-summit-2026-updated-badges.png", alt: "Denver Summit 2026 staff badge designs", layout: "full" }
     ],
     sections: [
       {
@@ -153,7 +155,22 @@ export const projects: Project[] = [
       {
         src: "/assets/videos/psb-summit-2026-grid.mp4",
         title: "Summit 2026 application grid"
+      },
+      {
+        src: "/assets/videos/psb-denver-summit-2026.mp4",
+        title: "Denver Summit 2026 motion graphic"
       }
+    ],
+    afterVideos: [
+      { src: "/assets/web/psb-mockups-gear-3.png", alt: "Pro Skills Basketball white game day shirt mockup", layout: "half", sectionHeading: "Merchandise" },
+      { src: "/assets/web/psb-mockups-gear-7.png", alt: "Pro Skills Basketball black shirt design mockup", layout: "half" },
+      { src: "/assets/web/psb-merch-pink-out.png", alt: "Pro Skills Basketball pink out merchandise graphics", layout: "half" },
+      { src: "/assets/web/psb-merch-future-baller.png", alt: "Future PSB Baller merchandise graphics", layout: "half" },
+      { src: "/assets/web/psb-merch-values-shirts.png", alt: "Pro Skills Basketball values shirt designs", layout: "half" },
+      { src: "/assets/web/psb-merch-usa-shirt.png", alt: "Pro Skills Basketball USA shirt mockup", layout: "half" },
+      { src: "/assets/web/psb-merch-sweatpants.png", alt: "Pro Skills Basketball sweatpants designs", layout: "half" },
+      { src: "/assets/web/psb-merch-hoodies.jpg", alt: "Pro Skills Basketball hoodie mockups", layout: "half" },
+      { src: "/assets/web/psb-merch-city-edition.jpg", alt: "Pro Skills Basketball city edition shirt designs", layout: "full" }
     ],
     featured: true
   },
@@ -177,7 +194,13 @@ export const projects: Project[] = [
       alt: "Digital Third Spaces book cover"
     },
     gallery: [
-      { src: "/assets/web/digital-third-spaces-cadc-gold.png", alt: "Digital Third Spaces CADC Gold award", layout: "half" },
+      { src: "/assets/web/dts-process-prints.jpg", alt: "Digital Third Spaces printed research pages on a worktable", layout: "half", sectionHeading: "Process" },
+      { src: "/assets/web/dts-process-design-system.png", alt: "Digital Third Spaces concept and visual system board", layout: "half" },
+      { src: "/assets/web/dts-process-connection-poster.png", alt: "Digital Third Spaces connection poster with location prompt", layout: "half" },
+      { src: "/assets/web/dts-process-poster-explorations.png", alt: "Digital Third Spaces poster explorations", layout: "half" },
+      { src: "/assets/web/dts-process-publication-mockups.jpg", alt: "Digital Third Spaces publication mockups", layout: "half" },
+      { src: "/assets/web/dts-process-interface-collage.png", alt: "Digital Third Spaces interface collage", layout: "half" },
+      { src: "/assets/web/digital-third-spaces-cadc-gold.png", alt: "Digital Third Spaces CADC Gold award", layout: "half", sectionHeading: "Final Work" },
       {
         src: "/assets/web/digital-third-spaces-cadc-judges-award.png",
         alt: "Digital Third Spaces CADC Judges Award",
