@@ -12,6 +12,7 @@ const skills = [
   "Adobe Photoshop",
   "Adobe InDesign",
   "Adobe After Effects",
+  "Blender",
   "Figma",
   "Canva",
   "DSLR camera/video",
@@ -19,7 +20,7 @@ const skills = [
   "Microsoft Office"
 ];
 
-const interests = ["Traveling near and far", "Playing golf", "Curating playlists", "Cartooning", "Learning pickleball"];
+const interests = ["Traveling near and far", "Playing (unexceptional) golf", "Curating playlists", "Cartooning", "Learning pickleball"];
 
 export default function ResumePage() {
   return (
@@ -29,13 +30,16 @@ export default function ResumePage() {
         <h1 className="mt-6 text-[clamp(3rem,8vw,6.5rem)] font-normal leading-[0.94] tracking-normal">
           William Cote
         </h1>
-        <p className="mt-5 text-xl leading-tight text-muted sm:text-3xl">Experiential Graphic Designer</p>
+        <p className="mt-5 text-xl leading-tight text-muted sm:text-3xl">Graphic Designer</p>
         <div className="mx-auto mt-8 flex max-w-3xl flex-wrap items-center justify-center gap-x-4 gap-y-3 text-[12px] uppercase leading-none text-muted sm:gap-x-6">
           <span>(203) 216-0084</span>
           <a href={profile.emailHref} className="underline hover:no-underline">
             {profile.email}
           </a>
-          <span>Andover, MA</span>
+          <a href="https://willcotedesign-portfolio.vercel.app" className="underline hover:no-underline">
+            willcotedesign-portfolio.vercel.app
+          </a>
+          <span>Boston, MA</span>
         </div>
       </FadeIn>
 
@@ -61,19 +65,27 @@ export default function ResumePage() {
               }
             ]}
           />
+          <ResumeBlock
+            title="Awards"
+            items={[
+              {
+                heading: "50th Annual Connecticut Art Directors Club Awards Show",
+                meta: "2026",
+                bullets: ["Gold Prize", "Judges Award"]
+              }
+            ]}
+          />
           <TagGroup title="Technical Skills" items={skills} />
           <TagGroup title="Interests" items={interests} />
         </FadeIn>
 
-        <FadeIn as="section" className="grid gap-10 lg:pl-10">
+        <FadeIn as="section" className="grid gap-8 lg:pl-10">
           <section className="border-t border-rule pt-6">
             <h2 className="text-[12px] font-medium uppercase leading-none text-muted">About</h2>
             <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted">
-              Creative and detail-oriented designer with professional experience in branding, visual
-              storytelling, photography, and digital marketing, complemented by a strong foundation in
-              typography, composition, and illustration. Passionate about creating immersive,
-              user-centered experiences that connect people with the built environment through
-              thoughtful design.
+              Award-winning, creative and detail-oriented designer with professional experience in
+              branding, visual storytelling, photography, and digital marketing, complemented by a
+              strong foundation in typography, composition, and illustration.
             </p>
           </section>
           <ResumeBlock
@@ -81,10 +93,10 @@ export default function ResumePage() {
             items={[
               {
                 heading: "Freelance Graphic Designer",
-                meta: "Professional Skills Basketball, Charlotte, NC | Summer 2025 and 2026",
+                meta: "Pro Skills Basketball, Charlotte, NC | 2025-Present",
                 bullets: [
                   "Conceptualize and execute a complete summer campaign of visual materials, including print collateral, for PSB Leadership Summit.",
-                  "Design logos using typography, composition, and color systems for national and regional merchandise and apparel.",
+                  "Design captivating logos using a range of typography, composition, and color schemes for national and regional merchandise and apparel.",
                   "Collaborate with the marketing department to present mood boards, monitor brand guidelines, and carry projects to completion."
                 ]
               },
@@ -105,9 +117,9 @@ export default function ResumePage() {
                 heading: "SFA Art Show | Digital Third Spaces",
                 meta: "May 2026",
                 bullets: [
-                  "Investigated how digital communities can function as third spaces.",
+                  "Investigated how digital communities can function as a third space through experiential design.",
                   "Designed a system that moved between critical writing, public installation, and interface prototypes to create social infrastructure, comfort, and identity.",
-                  "Developed large-format imagery, measured typography, and interactive artifacts to help the subject feel tangible."
+                  "Developed large-format imagery, measured typography, and interactive elements to help the subject feel tangible."
                 ]
               }
             ]}

@@ -33,10 +33,10 @@ export default function AboutPage() {
       <section className="grid gap-12 pt-16 md:grid-cols-[0.9fr_1.1fr] lg:pt-24">
         <FadeIn>
           <Image
-            src="/assets/web/about-portrait-book-close.png"
-            alt="William Cote portrait study in a spiral-bound book"
-            width={3302}
-            height={2320}
+            src="/assets/web/about-portrait-photo.jpg"
+            alt="William Cote taking a photograph"
+            width={4297}
+            height={4297}
             priority
             className="h-auto w-full"
           />
